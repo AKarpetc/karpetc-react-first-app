@@ -14,7 +14,6 @@ class App extends React.Component {
     this.authorize = this.authorize.bind(this);
 
     this.state = { userName: 'Bob', password: 'Bob' };
-
   }
   handleUserNameChange(userName) {
     console.log(userName);
@@ -25,9 +24,6 @@ class App extends React.Component {
   }
 
   authorize(event) {
-
-    console.log(this.state.userName, this.state.password);
-
     fetch('/api/LoginApi/Login', {
       method: 'POST',
       headers: {
